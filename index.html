@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Interactive Portfolio - Hiring Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Experience...</p>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-brand">
+            <h1>3D Portfolio</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home" data-section="0">Home</a>
+            <a href="#gallery" data-section="1">Gallery</a>
+            <a href="#experience" data-section="2">Experience</a>
+            <a href="#contact" data-section="3">Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Three.js Canvas -->
+        <canvas id="webgl-canvas"></canvas>
+
+        <!-- Content Sections -->
+        <section class="content-section" data-section="0">
+            <div class="section-content">
+                <h1 class="section-title">Interactive 3D Experience</h1>
+                <p class="section-subtitle">Scroll to explore the three-dimensional world</p>
+                <div class="scroll-indicator">
+                    <div class="scroll-line"></div>
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-section="1">
+            <div class="section-content">
+                <h2 class="section-title">3D Gallery</h2>
+                <p class="section-description">
+                    Experience dynamic 3D transformations as you scroll through this interactive gallery. 
+                    Each movement creates fluid animations that bring digital art to life.
+                </p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="item-content">
+                            <h3>Geometric Forms</h3>
+                            <p>Exploring mathematical beauty in 3D space</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-content">
+                            <h3>Light Studies</h3>
+                            <p>Dynamic lighting and shadow interactions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-section="2">
+            <div class="section-content">
+                <h2 class="section-title">Technical Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Interactive Controls</h3>
+                        <p>Scroll-based animations that transform 3D objects in real-time</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Dynamic Lighting</h3>
+                        <p>Cursor-following light effects with realistic shadows</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Performance</h3>
+                        <p>Optimized rendering with 60fps smooth animations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Seamless experience across all devices and screen sizes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" data-section="3">
+            <div class="section-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Ready to create something amazing together? Let's discuss your next 3D web project.
+                </p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>hello@threejs-dev.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Portfolio</h3>
+                        <p>github.com/threejs-dev</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cursor Light Effect -->
+    <div id="cursor-light"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
